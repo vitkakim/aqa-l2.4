@@ -68,8 +68,8 @@ public class MoneyTransferTest {
         dashboardPage.transfer(dashboardTransfer);
         var balanceFirstCardAfterTransfer = DashboardPage.getCardBalance(DataHelper.getFirstCard().getId());
         var balanceSecondCardAfterTransfer = DashboardPage.getCardBalance(DataHelper.getSecondCard().getId());
-        assertEquals(balanceFirstCardBeforeTransfer + transfer, balanceFirstCardAfterTransfer);
-        assertEquals(balanceSecondCardBeforeTransfer - transfer, balanceSecondCardAfterTransfer);
+        assertEquals(balanceFirstCardBeforeTransfer, balanceFirstCardAfterTransfer);
+        assertEquals(balanceSecondCardBeforeTransfer, balanceSecondCardAfterTransfer);
     }
 
 
