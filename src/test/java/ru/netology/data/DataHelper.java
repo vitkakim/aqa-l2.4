@@ -3,7 +3,8 @@ package ru.netology.data;
 import lombok.Value;
 
 public class DataHelper {
-    private DataHelper() {}
+    private DataHelper() {
+    }
 
     @Value
     public static class AuthInfo {
@@ -29,7 +30,7 @@ public class DataHelper {
     }
 
     @Value
-    public static class DashboardPage {
+    public static class TransferPage {
         private int transfer;
         private String card;
     }
@@ -49,7 +50,7 @@ public class DataHelper {
     }
 
 
-    public static DashboardPage getTransfer(AuthInfo authInfo, int transfer, CardInfo card) {
-        return new DashboardPage(transfer, card.number);
+    public static TransferPage getTransfer(AuthInfo authInfo, int transfer, CardInfo card) {
+        return new TransferPage(transfer, card.number);
     }
 }
